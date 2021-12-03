@@ -1,6 +1,6 @@
 {
   "name": "facedetection",
-  "homepage": "https://github.com/Ahmad-Ghorbani/facedetection-front.git",
+  "homepage": "https://github.com/Ahmad-Ghorbani/facedetection-front",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
