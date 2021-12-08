@@ -8,26 +8,27 @@ import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
-import Particles from "react-particles-js";
+import Particles from "react-tsparticles";
+import { particles } from "./components/particles/particles";
 
-const particlesOption = {
-  particles: {
-    number: {
-      value: 150,
-    },
-    size: {
-      value: 3,
-    },
-  },
-  interactivity: {
-    events: {
-      onhover: {
-        enable: true,
-        mode: "repulse",
-      },
-    },
-  },
-};
+// const particlesOption = {
+//   particles: {
+//     number: {
+//       value: 150,
+//     },
+//     size: {
+//       value: 3,
+//     },
+//   },
+//   interactivity: {
+//     events: {
+//       onhover: {
+//         enable: true,
+//         mode: "repulse",
+//       },
+//     },
+//   },
+// };
 
 const initialState = {
   link: "",
@@ -150,7 +151,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Particles className="particles" params={particlesOption} />
+        <Particles className="particles" params={particles} />
         <Navigation
           onRouteChange={this.onRouteChange}
           isSignedin={this.state.isSignedin}
