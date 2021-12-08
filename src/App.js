@@ -11,25 +11,6 @@ import Register from "./components/Register/Register";
 import Particles from "react-tsparticles";
 import { particles } from "./components/particles/particles";
 
-// const particlesOption = {
-//   particles: {
-//     number: {
-//       value: 150,
-//     },
-//     size: {
-//       value: 3,
-//     },
-//   },
-//   interactivity: {
-//     events: {
-//       onhover: {
-//         enable: true,
-//         mode: "repulse",
-//       },
-//     },
-//   },
-// };
-
 const initialState = {
   link: "",
 
