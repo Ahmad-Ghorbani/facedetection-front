@@ -1,4 +1,19 @@
 .Navigation {
   display: flex;
   justify-content: flex-end;
+  /* background-color: powderblue; */
+  font-size: 2.5em;
+  margin: 0.5em;
+  gap: 1em;
+}
+
+.signout {
+  width: 2em;
+  transition: 0.5s;
+}
+
+.signout:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.5s;
 }

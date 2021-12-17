@@ -7,14 +7,17 @@ class Signin extends Component {
     this.state = {
       signInEmail: "",
       signInPassword: "",
+      invalidCredentials: "",
     };
   }
 
   onEmailChange = (event) => {
+    // this.setState({ invalidCredentials: "" });
     this.setState({ signInEmail: event.target.value });
   };
 
   onPasswordChange = (event) => {
+    // this.setState({ invalidCredentials: "" });
     this.setState({ signInPassword: event.target.value });
   };
 
@@ -32,60 +35,75 @@ class Signin extends Component {
         if (user.id) {
           this.props.loadUser(user);
           this.props.onRouteChange("home");
+        } else if (
+          user === "incorrect form submission" ||
+          user === "wrong credentilas"
+        ) {
+          this.setState({ invalidCredentials: user });
         }
       });
   };
 
-  onRouteChange = () => {};
-
   render() {
     return (
-      <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-        <main className="pa4 black-80">
-          <div className="measure center">
-            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-              <legend className="f1 fw6 ph0 mh0 center">Sign In</legend>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">
-                  Email
-                </label>
-                <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="email"
-                  name="email-address"
-                  id="email-address"
-                  onChange={this.onEmailChange}
-                />
-              </div>
-              <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">
-                  Password
-                </label>
-                <input
-                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="password"
-                  name="password"
-                  id="password"
-                  onChange={this.onPasswordChange}
-                />
-              </div>
-            </fieldset>
-            <div className="">
+      <article className="signin_parent">
+        <main className="signin_div">
+          <div className="forms_div">
+            {/* <div className="signin_header">
+              <legend>Sign In</legend>
+            </div> */}
+            <div className="credentials--div">
+              {/* <label className="label" htmlFor="email-address">
+                Email
+              </label> */}
               <input
-                onClick={this.onSubmitSignin}
-                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
-                type="submit"
-                value="Sign in"
+                placeholder="Email"
+                className="input--field"
+                type="email"
+                name="email-address"
+                id="email-address"
+                onChange={this.onEmailChange}
               />
             </div>
-            {/* <div className="lh-copy mt3 register">
-              <p
-                onClick={() => this.onRouteChange("register")}
-                className="f6 link dim black db "
-              >
-                Register
-              </p>
-            </div> */}
+            <div className="credentials--div">
+              {/* <label className="label" htmlFor="password">
+                Password
+              </label> */}
+              <input
+                placeholder="Password"
+                className="input--field"
+                type="password"
+                name="password"
+                id="password"
+                onChange={this.onPasswordChange}
+              />
+            </div>
+            <div className="button--div">
+              <input
+                onClick={this.onSubmitSignin}
+                className="button"
+                type="submit"
+                value="Sign In"
+              />
+            </div>
+            <div className="register--div">
+              <h4>
+                Don't have an account?{" "}
+                <span
+                  className="register_route"
+                  onClick={() => this.props.onRouteChange("register")}
+                >
+                  Register
+                </span>
+              </h4>
+            </div>
+            {this.state.invalidCredentials !== "" ? (
+              <div className="invalidCredentials">
+                <p>{this.state.invalidCredentials}</p>
+              </div>
+            ) : (
+              <div></div>
+            )}
           </div>
         </main>
       </article>

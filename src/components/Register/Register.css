@@ -1,27 +1,12 @@
-.signin_parent {
-  /* width: 40em; */
-  position: relative;
-  height: 100vh;
-  width: 100vw;
+.register_parent {
+  width: 40em;
+  margin: 4em auto;
 }
 
-.signin_div {
-  width: 80vw;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  padding: 1em;
+.register_div {
+  padding: 2em;
   background-color: aliceblue;
   border-radius: 1em;
-}
-
-@media screen and (min-width: 768px) {
-  .signin_div {
-    width: 30vw;
-  }
 }
 
 .forms_div {
@@ -31,7 +16,7 @@
   padding: 1em 2em;
 }
 
-.signin_header {
+.register_header {
   font-size: 5em;
   font-weight: 500;
   padding: 0.2em;
@@ -41,12 +26,6 @@
   margin: 1em 2em;
   width: 100%;
 }
-
-/* .label {
-  font-size: 1.3em;
-  font-weight: 600;
-  display: block;
-} */
 
 .input--field {
   font-family: inherit;
@@ -59,7 +38,6 @@
   background-color: aliceblue;
   border-radius: 0.5em;
   outline-width: 0;
-  border-width: 0;
 }
 
 .input--field:hover,
@@ -67,7 +45,7 @@
   background-color: powderblue;
 }
 
-.button--div {
+/* .button--div {
   width: 100%;
   margin: 1em 2em;
   background: linear-gradient(
@@ -75,17 +53,15 @@
     rgb(9, 216, 221) 0%,
     rgb(14, 80, 242) 100%
   );
-  border-radius: 1em;
+   border-radius: 4em; 
   transition: transform 0.2s;
-}
+} */
 
-.button {
+/* .button {
   font-family: inherit;
   font-size: 2em;
   padding: 0.5em;
   background-color: inherit;
-  color: aliceblue;
-  border: 0px;
 }
 
 .button:hover {
@@ -99,36 +75,23 @@
     rgb(14, 86, 255) 0%,
     rgb(20, 86, 150) 100%
   );
-  /* transform: scale(1.02); */
 }
 
 .button--div:active {
   transform: scale(0.95);
-}
+} */
 
-.register--div {
+.signin--div {
   font-family: inherit;
 }
 
-.register_route {
+.signin_route {
   cursor: pointer;
   font-size: 1.8em;
   transition: 0.5s;
 }
 
-.register_route:hover {
+.signin_route:hover {
   opacity: 0.5;
   transition: opacity 0.5s;
-}
-
-.register_route:active {
-  transform: scale(0.95) 0.5s;
-}
-
-.invalidCredentials {
-  font-size: 1.5em;
-  font-weight: bold;
-  width: 100%;
-  background-color: rgb(253, 219, 224);
-  border: 0.1em solid rgb(252, 96, 96);
 }

@@ -5,7 +5,7 @@ const FaceRecognition = ({ source }) => {
   return (
     <div className="imagetoboDetected">
       <div className="relative" id="parent-div">
-        <img id="inputImage" src={source} alt="" />
+        <img className="image" id="inputImage" src={source} alt="" />
       </div>
     </div>
   );

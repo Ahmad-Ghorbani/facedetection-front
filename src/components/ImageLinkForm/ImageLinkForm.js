@@ -3,26 +3,23 @@ import "./ImageLinkForm.css";
 
 const ImageLinkForm = ({ imageLink, submitClicked }) => {
   return (
-    <div>
-      <p className="f3">
+    <div className="imageForm_parent">
+      {/* <p className="f3">
         This magic brain will detect faces in your pictures. Give it a try.
-      </p>
-      <div>
-        <div className="form center pa4 br3 shadow-5">
-          <input
-            type="text"
-            placeholder="Enter the image url"
-            className="pa2 f4 w-70 center"
-            onChange={imageLink}
-          />
-          <button
-            onClick={submitClicked}
-            className="w30 grow f4 link ph3 pv2 dib white bg-light-purple"
-          >
-            Detect
-          </button>
-        </div>
+      </p> */}
+      {/* <div className="image_parent"> */}
+      <div className="imageForm">
+        <input
+          type="text"
+          placeholder="Enter the image url"
+          className="image_input"
+          onChange={imageLink}
+        />
+        <button onClick={submitClicked} className="button_image">
+          Detect
+        </button>
       </div>
+      {/* </div> */}
     </div>
   );
 };

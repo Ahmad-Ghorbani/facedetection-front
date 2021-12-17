@@ -1,5 +1,6 @@
 import { Component } from "react";
 import React from "react";
+import "./Register.css";
 
 class Register extends Component {
   constructor(props) {
@@ -44,55 +45,69 @@ class Register extends Component {
 
   render() {
     return (
-      <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center">
-        <main className="pa4 black-80">
-          <div className="measure center">
-            <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
+      <article className="register_parent">
+        <main className="signin_div">
+          <div className="forms_div">
+            {/* <div className="register_header">
               <legend className="f1 fw6 ph0 mh0 center">Register</legend>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="text"
-                  name="name"
-                  id="name"
-                  onChange={this.onNameChange}
-                />
-              </div>
-              <div className="mt3">
-                <label className="db fw6 lh-copy f6" htmlFor="email-address">
-                  Email
-                </label>
-                <input
-                  className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="email"
-                  name="email-address"
-                  id="email-address"
-                  onChange={this.onEmailChange}
-                />
-              </div>
-              <div className="mv3">
-                <label className="db fw6 lh-copy f6" htmlFor="password">
-                  Password
-                </label>
-                <input
-                  className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-                  type="password"
-                  name="password"
-                  id="password"
-                  onChange={this.onPasswordChange}
-                />
-              </div>
-            </fieldset>
-            <div className="">
+            </div> */}
+            <div className="credentials--div">
+              {/* <label className="db fw6 lh-copy f6" htmlFor="name">
+                Name
+              </label> */}
+              <input
+                className="input--field"
+                placeholder="Name"
+                type="text"
+                name="name"
+                id="name"
+                onChange={this.onNameChange}
+              />
+            </div>
+            <div className="credentials--div">
+              {/* <label className="db fw6 lh-copy f6" htmlFor="email-address">
+                Email
+              </label> */}
+              <input
+                className="input--field"
+                placeholder="Email"
+                type="email"
+                name="email-address"
+                id="email-address"
+                onChange={this.onEmailChange}
+              />
+            </div>
+            <div className="credentials--div">
+              {/* <label className="db fw6 lh-copy f6" htmlFor="password">
+                Password
+              </label> */}
+              <input
+                className="input--field"
+                placeholder="Password"
+                type="password"
+                name="password"
+                id="password"
+                onChange={this.onPasswordChange}
+              />
+            </div>
+            <div className="button--div">
               <input
                 onClick={this.onSubmitRegister}
-                className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
+                className="button"
                 type="submit"
                 value="Register"
               />
+            </div>
+            <div className="register--div">
+              <h4>
+                Already have an account?{" "}
+                <span
+                  onClick={() => this.props.onRouteChange("signin")}
+                  className="signin_route"
+                >
+                  Sign in
+                </span>
+              </h4>
             </div>
           </div>
         </main>

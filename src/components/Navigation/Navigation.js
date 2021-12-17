@@ -1,35 +1,32 @@
 import React from "react";
 import "./Navigation.css";
+import profileImage from "./icon-profile-8.jpg";
 
 const Navigation = ({ onRouteChange, isSignedin }) => {
   if (isSignedin) {
     return (
       <nav className="Navigation">
-        <p
-          className="f3 link dim black underline pa3 pointer"
-          onClick={() => onRouteChange("signin")}
-        >
+        {/* <p className="letin" onClick={() => onRouteChange("signin")}>
           Sign out
-        </p>
+        </p> */}
+        <img
+          className="signout"
+          onClick={() => onRouteChange("signin")}
+          src={profileImage}
+          alt="profile "
+        />
       </nav>
     );
   } else {
-    return (
-      <nav className="Navigation">
-        <p
-          className="f3 link dim black underline pa3 pointer"
-          onClick={() => onRouteChange("Register")}
-        >
-          Register
-        </p>
-        <p
-          className="f3 link dim black underline pa3 pointer"
-          onClick={() => onRouteChange("signin")}
-        >
-          Sign in
-        </p>
-      </nav>
-    );
+    return (isSignedin = false);
+    // <nav className="Navigation">
+    //   <p className="letin" onClick={() => onRouteChange("Register")}>
+    //     Register
+    //   </p>
+    //   <p className="letin" onClick={() => onRouteChange("signin")}>
+    //     Sign in
+    //   </p>
+    // </nav>
   }
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
-import Logo from "./components/Logo/Logo";
+// import Logo from "./components/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
@@ -10,25 +10,6 @@ import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
 import Particles from "react-tsparticles";
 import { particles } from "./components/particles/particles";
-
-// const particlesOption = {
-//   particles: {
-//     number: {
-//       value: 150,
-//     },
-//     size: {
-//       value: 3,
-//     },
-//   },
-//   interactivity: {
-//     events: {
-//       onhover: {
-//         enable: true,
-//         mode: "repulse",
-//       },
-//     },
-//   },
-// };
 
 const initialState = {
   link: "",
@@ -158,7 +139,7 @@ class App extends Component {
         />
         {this.state.route === "home" ? (
           <div>
-            <Logo />
+            {/* <Logo /> */}
             <Rank
               userName={this.state.user.name}
               userEntries={this.state.user.entries}
