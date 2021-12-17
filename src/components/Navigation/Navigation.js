@@ -38,7 +38,7 @@ const Navigation = ({ onRouteChange, isSignedin }) => {
           />
           <div id="myDropdown" className="dropdown-content">
             <a onClick={() => onRouteChange("signin")}>Sign out</a>
-            <a>Your profile</a>
+            {/* <a>Your profile</a> */}
           </div>
         </nav>
       </div>
