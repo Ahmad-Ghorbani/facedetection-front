@@ -1,0 +1,29 @@
+.guest {
+  position: relative;
+  /* margin: 1em;
+  margin-top: 10vh; */
+}
+
+.guestName {
+  padding-top: 2em;
+  font-size: 3em;
+}
+
+.guestEnter {
+  font-size: 2em;
+  padding-bottom: 1em;
+}
+
+.float_guest {
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  transition: 0.5s;
+}
+
+.float_guest:hover {
+  opacity: 0.5;
+  transition: opacity 0.5s;
+}

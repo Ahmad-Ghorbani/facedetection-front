@@ -3,6 +3,7 @@ import { Component } from "react";
 import "./App.css";
 import Navigation from "./components/Navigation/Navigation";
 // import Logo from "./components/Logo/Logo";
+import Guest from "./components/Guest/Guest";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
@@ -13,7 +14,6 @@ import { particles } from "./components/particles/particles";
 
 const initialState = {
   link: "",
-
   boxArray: [],
   route: "signin",
   isSignedin: false,
@@ -134,10 +134,20 @@ class App extends Component {
       <div className="App">
         <Particles className="particles" params={particles} />
         <Navigation
+          onProfileEdit={this.onProfileEdit}
           onRouteChange={this.onRouteChange}
           isSignedin={this.state.isSignedin}
         />
-        {this.state.route === "home" ? (
+        {this.state.route === "home_notsignedin" ? (
+          <div className="notSignedin">
+            <Guest onRouteChange={this.onRouteChange} />
+            <ImageLinkForm
+              imageLink={this.imageLink}
+              submitClicked={this.submitClicked}
+            />
+            <FaceRecognition source={this.state.link} />
+          </div>
+        ) : this.state.route === "home" ? (
           <div>
             {/* <Logo /> */}
             <Rank

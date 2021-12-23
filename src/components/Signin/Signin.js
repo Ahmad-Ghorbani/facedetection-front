@@ -97,6 +97,17 @@ class Signin extends Component {
                 </span>
               </h4>
             </div>
+            <div className="register--div">
+              <h4>
+                Don't want to sign in? Go to{" "}
+                <span
+                  className="register_route"
+                  onClick={() => this.props.onRouteChange("home_notsignedin")}
+                >
+                  Homepage
+                </span>
+              </h4>
+            </div>
             {this.state.invalidCredentials !== "" ? (
               <div className="invalidCredentials">
                 <p>{this.state.invalidCredentials}</p>
