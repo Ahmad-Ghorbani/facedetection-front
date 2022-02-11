@@ -9,8 +9,8 @@ import Rank from "./components/Rank/Rank";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
-import Particles from "react-tsparticles";
-import { particles } from "./components/particles/particles";
+// import Particles from "react-tsparticles";
+// import { particles } from "./components/particles/particles";
 
 const initialState = {
   link: "",
@@ -132,7 +132,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Particles className="particles" params={particles} />
+        {/* <Particles className="particles" params={particles} /> */}
         <Navigation
           onProfileEdit={this.onProfileEdit}
           onRouteChange={this.onRouteChange}

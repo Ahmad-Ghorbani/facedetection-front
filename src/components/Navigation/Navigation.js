@@ -44,9 +44,9 @@ onclick = function (event) {
 //   }
 // };
 
-function onProfileUpdate() {
-  document.getElementById("profileDropdown").classList.toggle("showProfile");
-}
+// function onProfileUpdate() {
+//   document.getElementById("profileDropdown").classList.toggle("showProfile");
+// }
 
 const Navigation = ({ onRouteChange, isSignedin }) => {
   if (isSignedin) {
@@ -65,9 +65,9 @@ const Navigation = ({ onRouteChange, isSignedin }) => {
           />
           <div id="myDropdown" className="dropdown-content">
             <a onClick={() => onRouteChange("signin")}>Sign out</a>
-            <a onClick={() => onProfileUpdate()} className="profileDropbtn">
+            {/* <a onClick={() => onProfileUpdate()} className="profileDropbtn">
               Your profile
-            </a>
+            </a> */}
           </div>
           <div id="profileDropdown" className="profileDropdown-content">
             <div className="rightDiv">
